@@ -1,4 +1,4 @@
-
+[![Actions Status](https://github.com/vague666/Quote-LineProtocol/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/vague666/Quote-LineProtocol/actions?workflow=test)
 # NAME
 
 Quote::LineProtocol - Helper module for Lineprotocol quoting
