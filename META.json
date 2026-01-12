@@ -1,7 +1,7 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Helper module for Lineprotocol quoting",
    "author" : [
-      "vague666 <vague@cpan.org>"
+      "vague <vague@cpan.org>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v3.1.28, CPAN::Meta::Converter version 2.150010",
@@ -42,7 +42,9 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.008001"
+            "Syntax::Keyword::Match" : "0.08",
+            "Time::Moment" : "0.13",
+            "perl" : "v5.26.0"
          }
       },
       "test" : {
