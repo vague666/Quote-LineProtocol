@@ -178,7 +178,7 @@ $utc tells the function to use UTC time. Local timezone is assumed if not specif
 
 =head1 LICENSE
 
-Copyright (C) vague.
+Copyright (C) Jari Matilainen.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
