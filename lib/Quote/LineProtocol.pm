@@ -25,6 +25,7 @@ sub tags {
 
   for my $key (keys %tags) {
     my $val = $tags{$key};
+    next if $val eq '';
     push @r, sprintf(qq(%s=%s), $key =~ s{$qr}{\Q$1\E}gr, $val =~ s{$qr}{\Q$1\E}gr);
   }
 
@@ -37,6 +38,7 @@ sub fields {
 
   for my $key (sort keys %fields) {
     my $val = $fields{$key};
+    next if $val eq '';
     my $type;
 
     if(ref $val) {
