@@ -9,9 +9,10 @@ use Exporter 'import';
 our @EXPORT_OK = qw(measurement tags fields timestamp);
 
 our $VERSION = "0.1.0";
+our $TELEGRAF = $ENV{QUOTE_TELEGRAF} // 0; # Telegraf requires special quoting
 
 my $qr = qr{([,=\s])};    # Match tag and field keys, and tag values
-my $qs = qr{(["\\,=\s])}; # Match field string values
+my $qs = $TELEGRAF ? qr{(["\\,=])} : qr{(["\\,=\s])}; # Match field string values
 
 sub measurement {
   my $str = shift;
@@ -85,6 +86,8 @@ sub fields {
 
 sub timestamp {
   my ($unit, $utc) = @_;
+  $utc //= 0;
+  $unit //= '';
   my $now = $utc ? Time::Moment->now_utc : Time::Moment->now;
   return sprintf("%d", sprintf("%d%d", $now->epoch, $unit eq 'ns' ? $now->nanosecond
                                                   : $unit eq 'us' ? $now->microsecond
