@@ -123,6 +123,16 @@ Quote::LineProtocol - Helper module for Lineprotocol quoting
     meant to be sent over the InfluxDB lineprotocol following the rules specified
     on L<https://docs.influxdata.com/influxdb/v2/reference/syntax/line-protocol/>
 
+=head1 CONFIGURATION
+
+Telegraf requires special consideration of spaces in strings. If using this module with telegraf set the env var QUOTE_TELEGRAF before calling the script or use the following BEGIN block
+
+    BEGIN {
+      $ENV{QUOTE_TELEGRAF} = 1;
+      require Quote::LineProtocol;
+      Quote::LineProtocol->import(qw(measurement tags fields timestamp));
+    }
+
 =head1 METHODS
 
 =head2 measurement($str)
