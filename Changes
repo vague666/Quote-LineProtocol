@@ -2,6 +2,8 @@ Revision history for Perl extension Quote-LineProtocol
 
 {{$NEXT}}
 
+0.1.2 2026-01-13T12:53:33Z
+    - Updated pod
 0.1.1 2026-01-13T12:38:13Z
     - Telegraf requires special quoting
     - Skip keys with empty values
