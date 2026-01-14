@@ -30,6 +30,12 @@ Telegraf requires special consideration of spaces in strings. If using this modu
       Quote::LineProtocol->import(qw(measurement tags fields timestamp));
     }
 
+With Strawberry perl you can set the env var in the portableshell.bat by adding
+
+    set QUOTE_TELEGRAF=1
+
+to the file
+
 # METHODS
 
 ## measurement($str)
