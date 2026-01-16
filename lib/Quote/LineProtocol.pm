@@ -9,7 +9,7 @@ use Syntax::Keyword::Match;
 use Exporter 'import';
 our @EXPORT_OK = qw(measurement tags fields timestamp);
 
-our $VERSION = "0.1.3";
+our $VERSION = "0.1.4";
 our $TELEGRAF = $ENV{QUOTE_TELEGRAF} // 0; # Telegraf requires special quoting
 
 my $qr = qr{([,=\s])};    # Match tag and field keys, and tag values
