@@ -1,7 +1,7 @@
 {
    "abstract" : "Helper module for Lineprotocol quoting",
    "author" : [
-      "vague <vague@cpan.org>"
+      "vague <4Qt9Ma7@proton.me>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v3.1.28, CPAN::Meta::Converter version 2.150010",

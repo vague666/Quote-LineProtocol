@@ -209,7 +209,7 @@ it under the same terms as Perl itself.
 
 =head1 AUTHOR
 
-vague E<lt>vague@cpan.orgE<gt>
+vague E<lt>4Qt9Ma7@proton.meE<gt>
 
 =cut
 
